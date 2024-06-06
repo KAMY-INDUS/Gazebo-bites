@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.home{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.welcome{
+  font-family: "Poppins";
+  font-weight: 600;
+  padding: 15px;
+}
+.logo_txt{
+  font-size: 2rem;
+  font-weight: 600;
+}
+nav{
+  height: 100px;
+  background-color: rgb(255, 208, 121);
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+nav *{
+  color: black;
+}
+.gradient_top{
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  filter: blur(100px);
+  background-color: rgba(255, 123, 0, 0.4);
+  z-index: -1;
+}
+.gradient_bottom{
+  position: absolute;
+  bottom: 0px;
+  left: -50px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  filter: blur(100px);
+  background-color: rgba(255, 136, 0, 0.3);
+  z-index: -1;
+}
+.sign_style{
+  font-weight: 500;
+  background-color: rgb(255, 179, 66);
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.signcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.usericon{
+  border-radius: 50%;
+}
+.pro_style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(236, 156, 86);
+  padding: 10px;
+  border-radius: 10px;
+}
+.typed::after {
+  content: '|';
+  font-weight: bold;
+  display: inline;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
